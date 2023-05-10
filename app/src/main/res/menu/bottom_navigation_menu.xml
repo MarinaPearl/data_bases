@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_aircraft"
+        android:enabled="true"
+        android:icon="@drawable/airplanemode_active_24"
+        android:title="aircraft"/>
+    <item
+        android:id="@+id/menu_employees"
+        android:enabled="true"
+        android:icon="@drawable/person_24"
+        android:title="employees"/>
+    <item
+        android:id="@+id/menu_ticketes"
+        android:enabled="true"
+        android:icon="@drawable/ticket_24"
+        android:title="ticketes"/>
+    <item
+        android:id="@+id/menu_schedule"
+        android:enabled="true"
+        android:icon="@drawable/schedule_24"
+        android:title="schedule"/>
+
+</menu>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7e7de"
+    tools:context="ru.demchuk.database.employee.UpdateEmployee">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_worker"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:autofillHints="worker"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/white_shape"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/nameInsert"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:textColorHint="@color/black"
+            android:hint="Name"
+            android:background="@drawable/white_shape"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/lastNameInsert"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:textColorHint="@color/black"
+            android:hint="Last Name"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/white_shape"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_gender"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:textColorHint="@color/black"
+            android:autofillHints="worker"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/white_shape"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/dateInsert"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:textColorHint="@color/black"
+            android:hint="Start Work: dd.mm.yyyy"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/white_shape"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+        <EditText
+            android:id="@+id/ageInsert"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:inputType="number"
+            android:textColorHint="@color/black"
+            android:hint="Age"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/white_shape"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+        <EditText
+            android:id="@+id/countChildrenInsert"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:hint="Count Children"
+            android:inputType="number"
+            android:textColorHint="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/white_shape"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+        <EditText
+            android:id="@+id/salaryInsert"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:hint="Salary"
+            android:inputType="number"
+            android:textColorHint="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/white_shape"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+        <EditText
+            android:id="@+id/brigadeInsert"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:hint="Brigade"
+            android:inputType="number"
+            android:textColorHint="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/white_shape"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_db"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/gradient_bg"
+            android:text="Изменить данные"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+</FrameLayout>

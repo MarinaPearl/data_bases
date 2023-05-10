@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f7e7de"
+    tools:context="ru.demchuk.database.MainActivity"
+    android:weightSum="13">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="413dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_radius_darkblue"
+        android:layout_weight="3"
+        app:srcCompat="@drawable/plane" />
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment"
+        android:name="ru.demchuk.database.MainFragment"
+        android:layout_width="match_parent"
+        android:layout_weight="9"
+        android:layout_height="0dp"/>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:background="@color/white"
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        style="@style/Widget.App.BottomNavigationView"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</LinearLayout>
