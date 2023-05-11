@@ -21,6 +21,10 @@ class MainFragment : Fragment() {
             val intent = Intent(activity, ActivityChange::class.java)
             startActivity(intent)
         }
+        binding.buttonChangeUpdate.setOnClickListener {
+            val intent = Intent(activity, UpdateActivity::class.java)
+            startActivity(intent)
+        }
         return binding.root
     }
 

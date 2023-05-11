@@ -2,6 +2,7 @@ package ru.demchuk.database.connect
 
 import android.util.Log
 import ru.demchuk.database.Employee
+import ru.demchuk.database.Passanger
 import ru.demchuk.database.vm.ViewModelUpdate
 import java.sql.Connection
 import java.sql.DriverManager
@@ -41,6 +42,7 @@ class Connect(val vm : ViewModelUpdate) {
 }
 
 fun main() {
-//    val a = Connect()
-//    a.connectWithDataBase()
+//     val vm = ViewModelUpdate()
+//   val a = Connect(vm)
+//    a.updateDataBase()
 }
