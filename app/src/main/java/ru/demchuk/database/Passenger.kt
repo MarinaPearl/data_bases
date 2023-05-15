@@ -1,9 +1,9 @@
 package ru.demchuk.database
 
-data class Passanger(
+data class Passenger(
     var name: String,
-    var lastName : String,
+    var lastName: String,
     var ticket: String,
-    var rus : String,
+    var rus: String,
     var inter: String
-    )
+)

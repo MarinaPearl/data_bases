@@ -14,17 +14,7 @@
         android:theme="@style/Theme.DataBase"
         tools:targetApi="31">
         <activity
-            android:name=".UpdateActivity"
-            android:exported="false"
-            android:label="@string/title_activity_update"
-            android:theme="@style/Theme.DataBase.NoActionBar" />
-        <activity
-            android:name=".ActivityChange"
-            android:exported="false"
-            android:label="@string/title_activity_employee_insert"
-            android:theme="@style/Theme.DataBase.NoActionBar" />
-        <activity
-            android:name=".MainActivity"
+            android:name="ru.demchuk.database.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

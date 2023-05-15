@@ -24,6 +24,11 @@
         <item>m</item>
         <item>w</item>
     </string-array>
+    <string-array name="gender_all">
+        <item>all</item>
+        <item>m</item>
+        <item>w</item>
+    </string-array>
     <string-array name="tickets">
         <item>1</item>
         <item>2</item>

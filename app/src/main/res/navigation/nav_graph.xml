@@ -3,26 +3,67 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
-
+    app:startDestination="@id/mainFragment">
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="ru.demchuk.database.employee.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        android:id="@+id/mainFragment"
+        android:name="ru.demchuk.database.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_mainFragment_to_fragmentInsertEmployee3"
+            app:destination="@id/fragmentInsertEmployee" />
+        <action
+            android:id="@+id/action_mainFragment_to_fragmentUpdateOrDropPassenger2"
+            app:destination="@id/fragmentUpdateOrDropPassenger" />
+        <action
+            android:id="@+id/action_mainFragment_to_fragmentSelectEmployee"
+            app:destination="@id/fragmentSelectEmployee" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="ru.demchuk.database.employee.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
+        android:id="@+id/fragmentInsertEmployee"
+        android:name="ru.demchuk.database.changes.FragmentInsertEmployee"
+        android:label="fragment_insert_employee"
+        tools:layout="@layout/fragment_insert_employee" >
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_fragmentInsertEmployee_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/fragmentUpdateOrDropPassenger"
+        android:name="ru.demchuk.database.changes.FragmentUpdateOrDropPassenger"
+        android:label="fragment_update_drop_passenger"
+        tools:layout="@layout/fragment_update_drop_passenger" >
+        <action
+            android:id="@+id/action_fragmentUpdateOrDropPassenger_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSelectEmployee"
+        android:name="ru.demchuk.database.selectview.FragmentSelectEmployee"
+        android:label="fragment_select_empmloyee"
+        tools:layout="@layout/fragment_select_empmloyee" >
+        <action
+            android:id="@+id/action_fragmentSelectEmployee_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_fragmentSelectEmployee_to_fragmentSelectAllEmployees"
+            app:destination="@id/fragmentSelectAllEmployees" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSelectAllEmployees"
+        android:name="ru.demchuk.database.selectview.FragmentSelectAllEmployees"
+        android:label="fragment_select_all_employees"
+        tools:layout="@layout/fragment_select_all_employees" >
+        <action
+            android:id="@+id/action_fragmentSelectAllEmployees_to_fragmentListEmployees"
+            app:destination="@id/fragmentListEmployees" />
+        <action
+            android:id="@+id/action_fragmentSelectAllEmployees_to_fragmentSelectEmployee"
+            app:destination="@id/fragmentSelectEmployee" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentListEmployees"
+        android:name="ru.demchuk.database.selectview.FragmentListEmployees"
+        android:label="fragment_list_employees"
+        tools:layout="@layout/fragment_list_employees" />
 </navigation>

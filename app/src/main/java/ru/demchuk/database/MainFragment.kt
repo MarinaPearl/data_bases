@@ -15,17 +15,28 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
         binding = FragmentMainBinding.inflate(inflater, container, false)
-        binding.buttonChange.setOnClickListener {
-            val intent = Intent(activity, ActivityChange::class.java)
-            startActivity(intent)
-        }
-        binding.buttonChangeUpdate.setOnClickListener {
-            val intent = Intent(activity, UpdateActivity::class.java)
-            startActivity(intent)
-        }
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.buttonInsertEmployee.setOnClickListener {
+            MAIN.navController.navigate(R.id.action_mainFragment_to_fragmentInsertEmployee3)
+        }
+        binding.buttonUpdatePassenger.setOnClickListener {
+           MAIN.navController.navigate(R.id.action_mainFragment_to_fragmentUpdateOrDropPassenger2)
+        }
+        listenBottomNavigation()
+    }
+
+    private fun listenBottomNavigation() {
+        binding.bottomNavigation.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.menu_employees -> {MAIN.navController.navigate(R.id.action_mainFragment_to_fragmentSelectEmployee)}
+            }
+            true
+        }
     }
 
 }
