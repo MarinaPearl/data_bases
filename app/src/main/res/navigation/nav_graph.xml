@@ -55,11 +55,23 @@
         android:label="fragment_select_all_employees"
         tools:layout="@layout/fragment_select_all_employees" >
         <action
-            android:id="@+id/action_fragmentSelectAllEmployees_to_fragmentListEmployees"
-            app:destination="@id/fragmentListEmployees" />
-        <action
             android:id="@+id/action_fragmentSelectAllEmployees_to_fragmentSelectEmployee"
             app:destination="@id/fragmentSelectEmployee" />
+        <action
+            android:id="@+id/action_fragmentSelectAllEmployees_to_fragmentEnterForm"
+            app:destination="@id/fragmentEnterForm" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEnterForm"
+        android:name="ru.demchuk.database.selectview.FragmentEnterForm"
+        android:label="fragment_enter_form"
+        tools:layout="@layout/fragment_enter_form" >
+        <action
+            android:id="@+id/action_fragmentEnterForm_to_fragmentSelectAllEmployees"
+            app:destination="@id/fragmentSelectAllEmployees" />
+        <action
+            android:id="@+id/action_fragmentEnterForm_to_fragmentListEmployees"
+            app:destination="@id/fragmentListEmployees" />
     </fragment>
     <fragment
         android:id="@+id/fragmentListEmployees"

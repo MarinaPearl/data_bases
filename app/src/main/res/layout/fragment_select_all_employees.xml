@@ -18,135 +18,57 @@
             android:layout_height="170dp"
             app:srcCompat="@drawable/workers" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="40dp"
-            android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_experience"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/gradient_bg"
+            android:padding="20dp"
+            android:text="Стаж Работы"
+            android:textSize="20dp" />
 
-            <EditText
-                android:id="@+id/text_experience_min"
-                android:layout_width="170dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/white_shape"
-                android:hint="Минимальный стаж работы"
-                android:inputType="number"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="15sp" />
-
-            <EditText
-                android:id="@+id/text_experience_max"
-                android:layout_width="170dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="12dp"
-                android:background="@drawable/white_shape"
-                android:hint="Максимальный стаж работы"
-                android:inputType="number"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="15sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="25dp"
-            android:orientation="horizontal">
-
-            <androidx.appcompat.widget.AppCompatSpinner
-                android:id="@+id/spinner_gender_select"
-                android:layout_width="170dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center_horizontal"
-                android:autofillHints="worker"
-                android:background="@drawable/white_shape"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/select_children"
-                android:layout_width="170dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="12dp"
-                android:background="@drawable/white_shape"
-                android:hint="Количество детей"
-                android:inputType="number"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="15sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="25dp"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/text_age_select_min"
-                android:layout_width="170dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/white_shape"
-                android:hint="Минимальное количесвто лет"
-                android:inputType="number"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="15sp" />
-
-            <EditText
-                android:id="@+id/text_age_select_max"
-                android:layout_width="170dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="12dp"
-                android:background="@drawable/white_shape"
-                android:inputType="number"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="15sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="25dp"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/text_salary_select_min"
-                android:layout_width="170dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/white_shape"
-                android:hint="Минимальную зарплату"
-                android:inputType="number"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="15sp" />
-
-            <EditText
-                android:id="@+id/text_salary_select_max"
-                android:layout_width="170dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="12dp"
-                android:background="@drawable/white_shape"
-                android:hint="Максимальную зарплату"
-                android:inputType="number"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="15sp" />
-        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_gender"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/gradient_bg"
+            android:padding="20dp"
+            android:text="Половой Признак"
+            android:textSize="20dp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_age"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/gradient_bg"
+            android:padding="20dp"
+            android:text="Возраст"
+            android:textSize="20dp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_children"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/gradient_bg"
+            android:padding="20dp"
+            android:text="Наличие детей"
+            android:textSize="20dp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_salary"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/gradient_bg"
+            android:padding="20dp"
+            android:text="Зарплата"
+            android:textSize="20dp" />
     </LinearLayout>
 
     <ImageButton
