@@ -1,31 +1,31 @@
 package ru.demchuk.database.selectview
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import ru.demchuk.database.MAIN
 import ru.demchuk.database.R
-import ru.demchuk.database.databinding.FragmentSelectAllEmployeesBinding
+import ru.demchuk.database.databinding.FragmentAllAdministrationBinding
 
 
-class FragmentSelectAllEmployees : Fragment() {
+class FragmentAllAdministration : Fragment() {
 
-    private lateinit var binding : FragmentSelectAllEmployeesBinding
+    private lateinit var binding : FragmentAllAdministrationBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentSelectAllEmployeesBinding.inflate(inflater, container, false)
+        binding = FragmentAllAdministrationBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.buttonBack.setOnClickListener {
-            MAIN.navController.navigate(R.id.action_fragmentSelectAllEmployees_to_fragmentSelectEmployee)
+            MAIN.navController.navigate(R.id.action_fragmentAllAdministration_to_fragmentSelectEmployee)
         }
         listenButtonForNextFragment()
     }
@@ -45,8 +45,8 @@ class FragmentSelectAllEmployees : Fragment() {
         }
         binding.buttonGender.setOnClickListener {
             val bundle = Bundle()
-            bundle.putString("key", "employee")
-            MAIN.navController.navigate(R.id.action_fragmentSelectAllEmployees_to_fragmentForSorterByGender, bundle)
+            bundle.putString("key", "administration")
+            MAIN.navController.navigate(R.id.action_fragmentAllAdministration_to_fragmentForSorterByGender, bundle)
         }
         binding.buttonExperience.setOnClickListener {
             openFragmentWithList("start_work")
@@ -55,7 +55,6 @@ class FragmentSelectAllEmployees : Fragment() {
     private fun openFragmentWithList(message : String) {
         val bundle = Bundle()
         bundle.putString("key", message)
-        MAIN.navController.navigate(R.id.action_fragmentSelectAllEmployees_to_fragmentEnterForm, bundle)
+        MAIN.navController.navigate(R.id.action_fragmentAllAdministration_to_fragmentEnterFormForAdministration, bundle)
     }
-
 }

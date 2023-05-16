@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#f7e7de"
-    tools:context="ru.demchuk.database.selectview.FragmentListEmployees">
+    tools:context="ru.demchuk.database.selectview.FragmentForSorterByGender">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,25 +14,37 @@
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="180dp"
             app:srcCompat="@drawable/workers" />
-        <ListView
-            android:id="@+id/listView"
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_gender"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/white_shape"
             android:textColor="@color/black"
-            android:layout_width="match_parent"
-            android:textSize="20sp"
-            android:layout_height="470dp" />
+            android:textColorHint="@color/black"
+            android:textStyle="bold" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_select"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="65dp"
+            android:background="@drawable/gradient_bg"
+            android:padding="16dp"
+            android:text="Запросить"
+            android:textSize="20dp" />
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/button_back_main2"
+        android:id="@+id/button_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:background="#f7e7de"
         android:src="@drawable/back_48" />
-
-
 
 </RelativeLayout>

@@ -15,7 +15,7 @@ class ConnectSelect(val vm : ViewModelSelect) {
                 val statement = connection.connectWithDb()
                 val selectAnswer = statement.executeQuery(request)
                 while (selectAnswer.next()) {
-                    listAnswer.add(selectAnswer.getString(2) + "  " + selectAnswer.getString(3))
+                    listAnswer.add(selectAnswer.getString(vm.firstArguments) + "  " + selectAnswer.getString(vm.secondArguments))
                 }
                 connection.close()
                 vm.sendOnView(listAnswer)

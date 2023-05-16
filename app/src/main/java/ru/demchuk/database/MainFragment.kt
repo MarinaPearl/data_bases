@@ -34,6 +34,7 @@ class MainFragment : Fragment() {
         binding.bottomNavigation.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.menu_employees -> {MAIN.navController.navigate(R.id.action_mainFragment_to_fragmentSelectEmployee)}
+                R.id.menu_aircraft -> {MAIN.navController.navigate(R.id.action_mainFragment_to_fragmentStartForAircraft)}
             }
             true
         }

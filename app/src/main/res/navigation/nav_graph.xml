@@ -18,6 +18,9 @@
         <action
             android:id="@+id/action_mainFragment_to_fragmentSelectEmployee"
             app:destination="@id/fragmentSelectEmployee" />
+        <action
+            android:id="@+id/action_mainFragment_to_fragmentStartForAircraft"
+            app:destination="@id/fragmentStartForAircraft" />
     </fragment>
     <fragment
         android:id="@+id/fragmentInsertEmployee"
@@ -39,7 +42,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentSelectEmployee"
-        android:name="ru.demchuk.database.selectview.FragmentSelectEmployee"
+        android:name="ru.demchuk.database.selectview.FragmentChoiceEmployee"
         android:label="fragment_select_empmloyee"
         tools:layout="@layout/fragment_select_empmloyee" >
         <action
@@ -48,6 +51,12 @@
         <action
             android:id="@+id/action_fragmentSelectEmployee_to_fragmentSelectAllEmployees"
             app:destination="@id/fragmentSelectAllEmployees" />
+        <action
+            android:id="@+id/action_fragmentSelectEmployee_to_fragmentAllAdministration"
+            app:destination="@id/fragmentAllAdministration" />
+        <action
+            android:id="@+id/action_fragmentSelectEmployee_to_fragmentSelectDepartments"
+            app:destination="@id/fragmentSelectDepartments" />
     </fragment>
     <fragment
         android:id="@+id/fragmentSelectAllEmployees"
@@ -60,6 +69,9 @@
         <action
             android:id="@+id/action_fragmentSelectAllEmployees_to_fragmentEnterForm"
             app:destination="@id/fragmentEnterForm" />
+        <action
+            android:id="@+id/action_fragmentSelectAllEmployees_to_fragmentForSorterByGender"
+            app:destination="@id/fragmentForSorterByGender" />
     </fragment>
     <fragment
         android:id="@+id/fragmentEnterForm"
@@ -77,5 +89,138 @@
         android:id="@+id/fragmentListEmployees"
         android:name="ru.demchuk.database.selectview.FragmentListEmployees"
         android:label="fragment_list_employees"
-        tools:layout="@layout/fragment_list_employees" />
+        tools:layout="@layout/fragment_list_employees" >
+        <action
+            android:id="@+id/action_fragmentListEmployees_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentForSorterByGender"
+        android:name="ru.demchuk.database.selectview.FragmentForSorterByGender"
+        android:label="fragment_for_sorter_by_gender"
+        tools:layout="@layout/fragment_for_sorter_by_gender" >
+        <action
+            android:id="@+id/action_fragmentForSorterByGender_to_fragmentSelectAllEmployees"
+            app:destination="@id/fragmentSelectAllEmployees" />
+        <action
+            android:id="@+id/action_fragmentForSorterByGender_to_fragmentListEmployeeWithGender"
+            app:destination="@id/fragmentListEmployeeWithGender" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentListEmployeeWithGender"
+        android:name="ru.demchuk.database.selectview.FragmentListEmployeeWithGender"
+        android:label="fragment_list_employee_with_gender"
+        tools:layout="@layout/fragment_list_employee_with_gender" >
+        <action
+            android:id="@+id/action_fragmentListEmployeeWithGender_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAllAdministration"
+        android:name="ru.demchuk.database.selectview.FragmentAllAdministration"
+        android:label="fragment_all_administration"
+        tools:layout="@layout/fragment_all_administration" >
+        <action
+            android:id="@+id/action_fragmentAllAdministration_to_fragmentEnterFormForAdministration"
+            app:destination="@id/fragmentEnterFormForAdministration" />
+        <action
+            android:id="@+id/action_fragmentAllAdministration_to_fragmentSelectEmployee"
+            app:destination="@id/fragmentSelectEmployee" />
+        <action
+            android:id="@+id/action_fragmentAllAdministration_to_fragmentForSorterByGender"
+            app:destination="@id/fragmentForSorterByGender" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEnterFormForAdministration"
+        android:name="ru.demchuk.database.selectview.FragmentEnterFormForAdministration"
+        android:label="fragment_enter_form_for_administration"
+        tools:layout="@layout/fragment_enter_form_for_administration" >
+        <action
+            android:id="@+id/action_fragmentEnterFormForAdministration_to_fragmentListEmployees2"
+            app:destination="@id/fragmentListEmployees" />
+        <action
+            android:id="@+id/action_fragmentEnterFormForAdministration_to_fragmentAllAdministration"
+            app:destination="@id/fragmentAllAdministration" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSelectDepartments"
+        android:name="ru.demchuk.database.selectview.FragmentSelectDepartments"
+        android:label="fragment_select_departments"
+        tools:layout="@layout/fragment_select_departments" >
+        <action
+            android:id="@+id/action_fragmentSelectDepartments_to_fragmentSelectEmployee"
+            app:destination="@id/fragmentSelectEmployee" />
+        <action
+            android:id="@+id/action_fragmentSelectDepartments_to_fragmentEnterDepartments"
+            app:destination="@id/fragmentEnterDepartments" />
+        <action
+            android:id="@+id/action_fragmentSelectDepartments_to_fragmentDepartmentText"
+            app:destination="@id/fragmentDepartmentText" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEnterDepartments"
+        android:name="ru.demchuk.database.selectview.FragmentEnterDepartments"
+        android:label="fragment_enter_departments"
+        tools:layout="@layout/fragment_enter_departments" >
+        <action
+            android:id="@+id/action_fragmentEnterDepartments_to_fragmentSelectDepartments"
+            app:destination="@id/fragmentSelectDepartments" />
+        <action
+            android:id="@+id/action_fragmentEnterDepartments_to_fragmentListEmployees"
+            app:destination="@id/fragmentListEmployees" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDepartmentText"
+        android:name="ru.demchuk.database.selectview.FragmentDepartmentText"
+        android:label="fragment_deaperments_text"
+        tools:layout="@layout/fragment_deaperments_text" >
+        <action
+            android:id="@+id/action_fragmentDepartmentText_to_fragmentSelectDepartments"
+            app:destination="@id/fragmentSelectDepartments" />
+        <action
+            android:id="@+id/action_fragmentDepartmentText_to_fragmentListEmployees"
+            app:destination="@id/fragmentListEmployees" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentStartForAircraft"
+        android:name="ru.demchuk.database.aircrafts.FragmentStartForAircraft"
+        android:label="fragment_start_for_aircraft"
+        tools:layout="@layout/fragment_start_for_aircraft" >
+        <action
+            android:id="@+id/action_fragmentStartForAircraft_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_fragmentStartForAircraft_to_fragmentChoiceCategoryPilots"
+            app:destination="@id/fragmentChoiceCategoryPilots" />
+        <action
+            android:id="@+id/action_fragmentStartForAircraft_to_fragmentChoiceCategoryAircraft"
+            app:destination="@id/fragmentChoiceCategoryAircraft" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentChoiceCategoryPilots"
+        android:name="ru.demchuk.database.aircrafts.FragmentChoiceCategoryPilots"
+        android:label="fragment_choice_category_pilots"
+        tools:layout="@layout/fragment_choice_category_pilots" >
+        <action
+            android:id="@+id/action_fragmentChoiceCategoryPilots_to_fragmentStartForAircraft"
+            app:destination="@id/fragmentStartForAircraft" />
+        <action
+            android:id="@+id/action_fragmentChoiceCategoryPilots_to_fragmentEnterForm"
+            app:destination="@id/fragmentEnterForm" />
+        <action
+            android:id="@+id/action_fragmentChoiceCategoryPilots_to_fragmentForSorterByGender"
+            app:destination="@id/fragmentForSorterByGender" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentChoiceCategoryAircraft"
+        android:name="ru.demchuk.database.aircrafts.FragmentChoiceCategoryAircraft"
+        android:label="fragment_choice_category_aircraft"
+        tools:layout="@layout/fragment_choice_category_aircraft" >
+        <action
+            android:id="@+id/action_fragmentChoiceCategoryAircraft_to_fragmentEnterForm"
+            app:destination="@id/fragmentEnterForm" />
+        <action
+            android:id="@+id/action_fragmentChoiceCategoryAircraft_to_fragmentStartForAircraft"
+            app:destination="@id/fragmentStartForAircraft" />
+    </fragment>
 </navigation>

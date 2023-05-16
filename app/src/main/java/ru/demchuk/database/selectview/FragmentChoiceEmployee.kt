@@ -9,7 +9,7 @@ import ru.demchuk.database.MAIN
 import ru.demchuk.database.R
 import ru.demchuk.database.databinding.FragmentSelectEmpmloyeeBinding
 
-class FragmentSelectEmployee : Fragment() {
+class FragmentChoiceEmployee : Fragment() {
 
    private lateinit var binding : FragmentSelectEmpmloyeeBinding
 
@@ -28,6 +28,12 @@ class FragmentSelectEmployee : Fragment() {
         }
         binding.buttonSelectAll.setOnClickListener {
             MAIN.navController.navigate(R.id.action_fragmentSelectEmployee_to_fragmentSelectAllEmployees)
+        }
+        binding.buttonSelectBosses.setOnClickListener {
+            MAIN.navController.navigate(R.id.action_fragmentSelectEmployee_to_fragmentAllAdministration)
+        }
+        binding.buttonSelectEmployeeDepartments.setOnClickListener {
+            MAIN.navController.navigate(R.id.action_fragmentSelectEmployee_to_fragmentSelectDepartments)
         }
     }
 
