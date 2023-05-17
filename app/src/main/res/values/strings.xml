@@ -101,5 +101,18 @@
         <item>11</item>
         <item>12</item>
     </string-array>
+    <string-array name="start">
+        <item>SVO</item>
+    </string-array>
+    <string-array name="end">
+        <item>SVO</item>
+        <item>DME</item>
+        <item>LED</item>
+        <item>CDG</item>
+        <item>DXB</item>
+        <item>IKT</item>
+        <item>ISL</item>
+        <item>DPS</item>
+    </string-array>
     <string name="title_activity_update">UpdateActivity</string>
 </resources>

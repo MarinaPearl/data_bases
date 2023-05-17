@@ -21,6 +21,9 @@
         <action
             android:id="@+id/action_mainFragment_to_fragmentStartForAircraft"
             app:destination="@id/fragmentStartForAircraft" />
+        <action
+            android:id="@+id/action_mainFragment_to_fragmentFlightStart"
+            app:destination="@id/fragmentFlightStart" />
     </fragment>
     <fragment
         android:id="@+id/fragmentInsertEmployee"
@@ -222,5 +225,62 @@
         <action
             android:id="@+id/action_fragmentChoiceCategoryAircraft_to_fragmentStartForAircraft"
             app:destination="@id/fragmentStartForAircraft" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentFlightStart"
+        android:name="ru.demchuk.database.flightView.FragmentFlightStart"
+        android:label="fragment_flight_start"
+        tools:layout="@layout/fragment_flight_start" >
+        <action
+            android:id="@+id/action_fragmentFlightStart_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_fragmentFlightStart_to_fragmentRoute"
+            app:destination="@id/fragmentRoute" />
+        <action
+            android:id="@+id/action_fragmentFlightStart_to_enterFragmentForFlight"
+            app:destination="@id/enterFragmentForFlight" />
+        <action
+            android:id="@+id/action_fragmentFlightStart_to_fragmentCancelledFlightStart"
+            app:destination="@id/fragmentCancelledFlightStart" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRoute"
+        android:name="ru.demchuk.database.flightView.FragmentRoute"
+        android:label="fragment_route"
+        tools:layout="@layout/fragment_route" >
+        <action
+            android:id="@+id/action_fragmentRoute_to_fragmentFlightStart"
+            app:destination="@id/fragmentFlightStart" />
+        <action
+            android:id="@+id/action_fragmentRoute_to_fragmentListEmployees"
+            app:destination="@id/fragmentListEmployees" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterFragmentForFlight"
+        android:name="ru.demchuk.database.flightView.EnterFragmentForFlight"
+        android:label="fragment_enter_for_flight"
+        tools:layout="@layout/fragment_enter_for_flight" >
+        <action
+            android:id="@+id/action_enterFragmentForFlight_to_fragmentFlightStart"
+            app:destination="@id/fragmentFlightStart" />
+        <action
+            android:id="@+id/action_enterFragmentForFlight_to_fragmentListEmployees"
+            app:destination="@id/fragmentListEmployees" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCancelledFlightStart"
+        android:name="ru.demchuk.database.flightView.FragmentCancelledFlightStart"
+        android:label="fragment_cancelled_flight_start"
+        tools:layout="@layout/fragment_cancelled_flight_start" >
+        <action
+            android:id="@+id/action_fragmentCancelledFlightStart_to_fragmentFlightStart"
+            app:destination="@id/fragmentFlightStart" />
+        <action
+            android:id="@+id/action_fragmentCancelledFlightStart_to_fragmentRoute"
+            app:destination="@id/fragmentRoute" />
+        <action
+            android:id="@+id/action_fragmentCancelledFlightStart_to_enterFragmentForFlight"
+            app:destination="@id/enterFragmentForFlight" />
     </fragment>
 </navigation>
