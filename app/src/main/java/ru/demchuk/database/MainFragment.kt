@@ -36,6 +36,7 @@ class MainFragment : Fragment() {
                 R.id.menu_employees -> {MAIN.navController.navigate(R.id.action_mainFragment_to_fragmentSelectEmployee)}
                 R.id.menu_aircraft -> {MAIN.navController.navigate(R.id.action_mainFragment_to_fragmentStartForAircraft)}
                 R.id.menu_schedule -> {MAIN.navController.navigate(R.id.action_mainFragment_to_fragmentFlightStart)}
+                R.id.menu_ticketes -> {MAIN.navController.navigate(R.id.action_mainFragment_to_fragmentTicket)}
             }
             true
         }

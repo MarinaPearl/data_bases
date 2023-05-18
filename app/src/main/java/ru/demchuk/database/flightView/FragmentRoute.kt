@@ -78,7 +78,6 @@ class FragmentRoute : Fragment() {
 
     private fun listenButton() {
         binding.buttonSelect.setOnClickListener {
-            Log.d("aaaaaaaaaaaaaa", returnStringSelect())
             vm.selectInDb(returnStringSelect())
             val observer = Observer<ArrayList<String>> {
                 val bundle = Bundle()
@@ -96,11 +95,18 @@ class FragmentRoute : Fragment() {
         return when(arguments?.getString("type")) {
              "cancelled" -> {"""select *
                 from SCHEDULE join FLIGHTS on FLIGHTS.id = SCHEDULE.FLIGHT where START_POINT='${binding.spinnerStart.selectedItem}' and END_POINT='${binding.spinnerEnd.selectedItem}' and status = 2"""}
+            "pas" -> {
+                vm.firstArgument = 2
+                vm.secondArgument = 3
+                vm.thirdArgument = 19
+                """select *
+                    from PASSENGERS join TICKETS on PASSENGERS.TICKET = TICKETS.id join SCHEDULE on SCHEDULE.id = TICKETS.FLIGHT join FLIGHTS on FLIGHTS.id = SCHEDULE.FLIGHT
+                    where START_POINT='${binding.spinnerStart.selectedItem}' and END_POINT='${binding.spinnerEnd.selectedItem}'"""
+            }
             else -> {
                 """select *
                 from SCHEDULE join FLIGHTS on FLIGHTS.id = SCHEDULE.FLIGHT where START_POINT='${binding.spinnerStart.selectedItem}' and END_POINT='${binding.spinnerEnd.selectedItem}'"""
             }
         }
     }
-
 }

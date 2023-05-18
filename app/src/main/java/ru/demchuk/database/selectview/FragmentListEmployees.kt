@@ -9,6 +9,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import ru.demchuk.database.MAIN
 import ru.demchuk.database.R
+import ru.demchuk.database.adapter.ListViewAdapter
 import ru.demchuk.database.databinding.FragmentListEmployeesBinding
 
 class FragmentListEmployees : Fragment() {
@@ -28,8 +29,9 @@ class FragmentListEmployees : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val listEmployee = arguments?.getStringArrayList("key")
         if (listEmployee != null) {
-            val adapter =
-                context?.let { ArrayAdapter<String>(it, android.R.layout.simple_list_item_1, listEmployee) }
+//            val adapter =
+//                context?.let { ArrayAdapter<String>(it, android.R.layout.simple_list_item_1, listEmployee) }
+            val adapter = context?.let { ListViewAdapter(it, listEmployee) }
                 binding.listView.adapter = adapter
         }
         binding.buttonBackMain2.setOnClickListener {

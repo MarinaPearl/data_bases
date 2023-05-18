@@ -17,7 +17,7 @@ class ConnectSelectMoreArguments(val vm: ViewModelSelectMore) {
                     listAnswer.add(
                         selectAnswer.getString(vm.firstArgument).substringBefore(" ") + "  " + selectAnswer.getString(
                             vm.secondArgument
-                        ) + " " + selectAnswer.getString(vm.thirdArgument)
+                        ) + " " + selectAnswer.getString(vm.thirdArgument).substringBefore(" ")
                     )
                 }
                 connection.close()

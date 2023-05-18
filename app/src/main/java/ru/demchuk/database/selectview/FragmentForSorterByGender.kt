@@ -84,6 +84,8 @@ class FragmentForSorterByGender : Fragment() {
             "pilot" -> {
                 "select * from EMPLOYEES join PILOTS on PILOTS.EMPLOYEE = EMPLOYEES.id where GENDER = '${binding.spinnerGender.selectedItem}'"
             }
+            "pas" -> {"""select *
+                    from PASSENGERS where gender = '${binding.spinnerGender.selectedItem}'"""}
             else -> {
                 "select * from EMPLOYEES join ADMINISTRATION on EMPLOYEE = EMPLOYEES.id where GENDER = '${binding.spinnerGender.selectedItem}'"
             }

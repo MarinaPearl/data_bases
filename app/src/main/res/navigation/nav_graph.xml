@@ -24,6 +24,9 @@
         <action
             android:id="@+id/action_mainFragment_to_fragmentFlightStart"
             app:destination="@id/fragmentFlightStart" />
+        <action
+            android:id="@+id/action_mainFragment_to_fragmentTicket"
+            app:destination="@id/fragmentTicket" />
     </fragment>
     <fragment
         android:id="@+id/fragmentInsertEmployee"
@@ -282,5 +285,47 @@
         <action
             android:id="@+id/action_fragmentCancelledFlightStart_to_enterFragmentForFlight"
             app:destination="@id/enterFragmentForFlight" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTicket"
+        android:name="ru.demchuk.database.flightView.FragmentTicket"
+        android:label="fragment_ticket"
+        tools:layout="@layout/fragment_ticket" >
+        <action
+            android:id="@+id/action_fragmentTicket_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_fragmentTicket_to_fragmentPassengers"
+            app:destination="@id/fragmentPassengers" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPassengers"
+        android:name="ru.demchuk.database.flightView.FragmentPassengers"
+        android:label="fragment_passengers"
+        tools:layout="@layout/fragment_passengers" >
+        <action
+            android:id="@+id/action_fragmentPassengers_to_fragmentTicket"
+            app:destination="@id/fragmentTicket" />
+        <action
+            android:id="@+id/action_fragmentPassengers_to_fragmentRoute"
+            app:destination="@id/fragmentRoute" />
+        <action
+            android:id="@+id/action_fragmentPassengers_to_fragmentForSorterByGender"
+            app:destination="@id/fragmentForSorterByGender" />
+        <action
+            android:id="@+id/action_fragmentPassengers_to_fragmentOneEnterForm"
+            app:destination="@id/fragmentOneEnterForm" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentOneEnterForm"
+        android:name="ru.demchuk.database.flightView.FragmentOneEnterForm"
+        android:label="fragment_one_enter_form"
+        tools:layout="@layout/fragment_one_enter_form" >
+        <action
+            android:id="@+id/action_fragmentOneEnterForm_to_fragmentPassengers"
+            app:destination="@id/fragmentPassengers" />
+        <action
+            android:id="@+id/action_fragmentOneEnterForm_to_fragmentListEmployees"
+            app:destination="@id/fragmentListEmployees" />
     </fragment>
 </navigation>
